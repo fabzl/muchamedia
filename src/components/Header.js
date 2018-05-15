@@ -46,7 +46,7 @@ const LinkTo = styled(NavLink)`
   @media (max-width: 740px) {
     font-size: 2.4em;
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 7vh;
     &:first-child {
       display: flex;
     }

@@ -23,10 +23,6 @@ const Translations = {
     }
   },
   home: {
-    title: {
-      en: "Great stories for small people",
-      es: "Grandes historias para gente pequeña"
-    },
     link: {
       en: "See all the works",
       es: "Ver todos los trabajos"
@@ -40,7 +36,7 @@ const Translations = {
   },
   about: {
     prizes: {
-      en: "Prizes",
+      en: "Awards",
       es: "Premios"
     }
   },

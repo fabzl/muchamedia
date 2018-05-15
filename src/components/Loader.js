@@ -15,7 +15,7 @@ const Loader = props => {
     /* display: ${props.visible ? "grid" : "none"}; */
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     width: 100vw;
     height: 100vh;
     background: ${colors.white};
@@ -30,8 +30,8 @@ const Loader = props => {
       width: 100%;
       height: auto;
       cursor: pointer;
-      grid-column: 2 / 2;
-      grid-row: 2 / 2;
+      grid-column:4 /4;
+      grid-row:2/2;
       flex-grow: 2;
       display: flex;
       align-self: center;

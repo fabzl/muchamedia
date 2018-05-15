@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 
 // import { enableScroll, disableScroll } from "../helpers";
 import { stopVideo } from "../redux/actions";
-import { colors, tvOn } from "../styles/globals";
+import { tvOn } from "../styles/globals";
 
 const Overlay = styled.div`
   position: fixed; /* Sit on top of the page content */
@@ -16,7 +16,7 @@ const Overlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: #000;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+
   z-index: 9999; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
   /* transition: opacity 300ms ease-in-out;
@@ -31,8 +31,10 @@ const Content = styled.div`
   border: 1px solid white;
   width: 100%;
   height: 100%; */
+  border: 1px solid white;
   display: flex;
   height: 100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -42,7 +44,7 @@ const Content = styled.div`
 const CloseButton = styled.div`
   position: absolute;
   right: 10px;
-  top: 20px;
+  top: 10px;
   color: #ddd;
   &:hover {
     opacity: 0.5;
@@ -69,11 +71,12 @@ class Modal extends Component {
           </CloseButton>
 
           <ReactPlayer
-            url="https://vimeo.com/247535876"
-            isPlayable={true}
+            url={this.props.url}
             playing={true}
+            autoPlay
+            controls
             width="100%"
-            height="90%"
+            height="100vmin"
           />
         </Content>
       </Overlay>
@@ -81,4 +84,10 @@ class Modal extends Component {
   }
 }
 
-export default connect(null, { stopVideo })(Modal);
+const mapStateToProps = state => {
+  return {
+    url: state.video.url
+  };
+};
+
+export default connect(mapStateToProps, { stopVideo })(Modal);

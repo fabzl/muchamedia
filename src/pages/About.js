@@ -34,6 +34,15 @@ const H2 = styled.h2`
   margin: 2rem 0 0.6em;
   letter-spacing: 130%;
   text-align: center;
+  font-size: 24px;
+  padding: 0 10%;
+  @media (min-width: 520px) {
+    font-size: 32px;
+    padding: 0;
+  }
+  @media (min-width: 720px) {
+    font-size: 36px;
+  }
 
   &.dark {
     color: ${colors.black};
@@ -79,6 +88,7 @@ const Prizes = styled.div`
   display: flex;
   color: ${colors.white};
   flex: 1;
+  flex-direction: row;
 `;
 
 const Box = styled.div`
@@ -122,7 +132,9 @@ const About = props => {
     <div>
       <Wrap src={props.data.about_image_big.url} />
       <Acerca>
-        <H2>{language === "es" ? text_about : about_us}</H2>
+        <H2 className="title-part line-1">
+          {language === "es" ? text_about : about_us}
+        </H2>
       </Acerca>
       <Images>
         <Image src={about_image_small_1.url} />
@@ -137,7 +149,7 @@ const About = props => {
               {translations.about.prizes[props.language]}
             </H2>
             {premiosArray[props.language].map(item => (
-              <div key={item}>
+              <div className="premio" key={item}>
                 <Item item={item} />
               </div>
             ))}
@@ -150,7 +162,7 @@ const About = props => {
 
 const mapStateToProps = state => {
   return {
-    data: state.data.pages[0].acf,
+    data: state.data.pages[1].acf,
     language: state.data.language
   };
 };

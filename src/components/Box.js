@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { connect } from "react-redux";
-import { playVideo } from "../redux/actions";
-import { Link } from "react-router-dom";
-import { colors } from "../styles/globals";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { playVideo } from '../redux/actions';
+import { Link } from 'react-router-dom';
+import { colors } from '../styles/globals';
 
 const Wrap = styled.div`
   position: relative;
@@ -97,13 +97,13 @@ class Box extends Component {
     return (
       <Wrap src={this.props.image}>
         <LinkTo
-          to={this.props.link ? `/work/${this.props.link}` : "/"}
+          to={this.props.link ? `/work/${this.props.link}` : '/'}
           onClick={this.handleLink}
         >
           <Content>
             <Middle>
-              <h4>{this.props.title}</h4>
-              <h3>{this.props.client}</h3>
+              <h4>{this.props.client}</h4>
+              <h3>{this.props.title}</h3>
             </Middle>
           </Content>
         </LinkTo>

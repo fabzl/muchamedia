@@ -28,30 +28,19 @@ const Wrap = styled.div`
   min-height: 100vh;
   flex-direction: column;
   height: 100%;
-  top:0;
+  top: 0;
   background: ${colors.black};
-  /* overflow: ${props => (props.showVideo ? "hidden" : "visible")}; */
 `;
 
 class App extends Component {
   componentDidMount() {
     this.props.fetchData();
     this.props.loaderLoading();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    // if (prevProps.showVideo && !this.props.showVideo)
-    // window.scrollTo(0, prevProps.scrollY);
+    // window.scrollTo(0, 0);
   }
 
   setToDestroy = props => {
     this.props.contentLoaded();
-    // setTimeout(() => {
-    //   this.props.loaderVisible();
-    // }, 800);
-  };
-  checkMobileNav = props => {
-    console.log("holii");
   };
 
   render() {

@@ -1,9 +1,9 @@
-import React from 'react';
-import { Redirect } from 'react-router';
+import React from "react";
+import { Redirect } from "react-router";
 
-import { connect } from 'react-redux';
-import MainImage from '../components/MainImage';
-import Desc from '../components/Desc';
+import { connect } from "react-redux";
+import MainImage from "../components/MainImage";
+import Desc from "../components/Desc";
 
 const ShowWork = props => {
   // Filtrar a solamente los que tienen avatar_picture
@@ -26,6 +26,8 @@ const ShowWork = props => {
     cliente
   } = items[key].acf;
 
+  // const postContentData = items[key].content.rendered;
+
   // Sacar los Prev o nextLink
   const prevLink =
     key === 0 ? items[items.length - 1].slug : items[key - 1].slug;
@@ -36,7 +38,7 @@ const ShowWork = props => {
     <div>
       <MainImage
         nombre_del_proyecto={
-          language === 'es' ? nombre_del_proyecto : project_name
+          language === "es" ? nombre_del_proyecto : project_name
         }
         url={url}
         videoUrl={vimeourl}
@@ -45,9 +47,9 @@ const ShowWork = props => {
       />
 
       <Desc
-        title={language === 'es' ? nombre_del_proyecto : project_name}
+        title={language === "es" ? nombre_del_proyecto : project_name}
         desc={
-          language === 'es' ? descripcion_del_proyecto : project_description
+          language === "es" ? descripcion_del_proyecto : project_description
         }
         client={cliente}
         language={language}

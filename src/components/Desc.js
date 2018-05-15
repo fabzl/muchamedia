@@ -1,6 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import translations from '../translations';
+import React from "react";
+import styled from "styled-components";
+import translations from "../translations";
+import { colors } from "../styles/globals";
 
 const Section = styled.div`
   padding: 40px 0 20px;
@@ -9,7 +10,7 @@ const Section = styled.div`
 const Container = styled.div`
   max-width: 600px;
   margin: 0 auto;
-  color: #f1f1f2;
+  color: ${colors.white};
   text-align: center;
 `;
 
