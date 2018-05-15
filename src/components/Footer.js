@@ -159,10 +159,12 @@ const Footer = props => (
             href={
               "mailto:" +
               props.dataContact.mail_de_contacto +
-              "?subject=Contacto%20desde%20Maquina%20Visual"
+              "?subject=Contacto%20desde%20" +
+              props.dataContact.mail_de_contacto
             }
           >
-            <i className="far fa-envelope fa-2x" />contacto@maquinavisual.com
+            <i className="far fa-envelope fa-2x" />
+            {props.dataContact.mail_de_contacto}
           </LinkTo>
         </Links>
       </General>

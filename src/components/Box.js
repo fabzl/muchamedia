@@ -32,7 +32,7 @@ const Content = styled.div`
   bottom: 0;
   left: 0;
   padding: 20px;
-  background: rgba(68, 48, 79, 0.85);
+  background: rgba(68, 48, 79, 0.6);
   opacity: 0;
   transition: opacity 0.3s;
   text-align: center;
