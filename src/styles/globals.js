@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { keyframes } from "styled-components";
 
 export const colors = {
-  black: "#1e1814",
+  black: "#44304f",
   gray: "#282828",
-  white: "#f1f1f2",
-  violet: "#d73875",
-  orange: "#cd4952"
+  white: "#FFF",
+  violet: "#66ffcc",
+  orange: "#33c29f"
 };
 
 // keyframes returns a unique name based on a hash of the contents of the keyframes

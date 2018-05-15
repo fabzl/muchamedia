@@ -101,8 +101,8 @@ const Box = styled.div`
 
   background: linear-gradient(
     45deg,
-    rgba(205, 73, 82, 1) 0%,
-    rgba(215, 56, 117, 1) 100%
+    ${colors.orange} 0%,
+    ${colors.violet} 100%
   );
   padding-bottom: 100px;
 `;

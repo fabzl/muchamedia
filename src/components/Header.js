@@ -59,6 +59,7 @@ const LinkTo = styled(NavLink)`
 
 const LogoContainer = styled.div`
   margin-right: auto;
+  margin-top: 25px;
 `;
 
 const Logo = styled.img`
@@ -213,9 +214,9 @@ class Header extends React.Component {
             {translations.header.home[language]}
           </LinkTo>
 
-          <LinkTo onClick={this.checkMobileNav} to="/reel">
+          {/* <LinkTo onClick={this.checkMobileNav} to="/reel">
             {translations.header.reel[language]}
-          </LinkTo>
+          </LinkTo> */}
 
           <LinkTo onClick={this.checkMobileNav} to="/work">
             {translations.header.work[language]}

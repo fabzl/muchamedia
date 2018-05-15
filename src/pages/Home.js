@@ -12,8 +12,8 @@ const AllWork = styled.div`
   padding: 0;
   background: linear-gradient(
     135deg,
-    rgba(205, 73, 82, 1) 0%,
-    rgba(215, 56, 117, 1) 100%
+    ${colors.orange} 0%,
+    ${colors.violet} 100%
   );
   text-align: center;
 `;
@@ -61,7 +61,7 @@ const Home = props => (
 const mapStateToProps = state => {
   return {
     data: state.data.posts,
-    dataHome: state.data.pages[3].acf,
+    dataHome: state.data.pages[2].acf,
     dataContact: state.data.pages[0].acf,
     language: state.data.language
   };

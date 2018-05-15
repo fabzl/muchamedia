@@ -13,6 +13,7 @@ const pagesEndPoint = `${apiUrl}/wp-json/wp/v2/pages`; // Endpoint for getting W
 const postsEndPoint = `${apiUrl}/wp-json/wp/v2/posts`; // Endpoint for getting Wordpress Posts
 
 const fetchSuccess = data => {
+  console.log(data);
   return {
     type: FETCH_DATA_SUCCESS,
     payload: data
