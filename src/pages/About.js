@@ -119,13 +119,12 @@ const About = props => {
     about_image_small_4,
     text_about,
     about_us,
-    premios,
-    awards
+    premios
   } = data;
 
   const premiosArray = {
     es: premios.split(" // "),
-    en: awards.split(" // ")
+    en: premios.split(" // ")
   };
 
   return (
@@ -143,7 +142,7 @@ const About = props => {
         <Image src={about_image_small_4.url} />
       </Images>
       <Prizes>
-        <Box>
+        {/* <Box>
           <div>
             <H2 className="dark">
               {translations.about.prizes[props.language]}
@@ -153,8 +152,8 @@ const About = props => {
                 <Item item={item} />
               </div>
             ))}
-          </div>
-        </Box>
+          </div> 
+        </Box>*/}
       </Prizes>
     </div>
   );
