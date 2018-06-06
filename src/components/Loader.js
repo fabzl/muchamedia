@@ -20,9 +20,7 @@ const Loader = props => {
     height: 100vh;
     background: ${colors.white};
     align-items: center;
-
     animation:  ${colorsBGanimation} 10s,${props.loaded ? slideOut : ""};
-
     animation-duration: 800ms;
     animation-fill-mode: forwards;
 
