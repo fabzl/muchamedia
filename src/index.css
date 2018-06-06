@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'base';
   src: url('./fonts/base400.woff') format('woff');
   font-weight: 400;
@@ -31,7 +31,7 @@
   src: url('./fonts/base700i.woff') format('woff');
   font-weight: 700;
   font-style: italic
-}
+} */
 
 body {
   margin: 0; 
