@@ -40,25 +40,25 @@ class Social extends Component {
 
     return (
       <Social>
-        <SocialLink
-          target="_blank"
-          href="https://www.facebook.com/pg/maquinavisual"
-        >
+        <SocialLink target="_blank" href="https://web.facebook.com/muchamedia">
           <i className="fab fa-facebook-f fa-2x" />
         </SocialLink>
 
+        {/* <SocialLink target="_blank" href="https://www.instagram.com/muchamedia">
+          <i className="fab fa-instagram fa-2x" />
+        </SocialLink> */}
+
         <SocialLink
           target="_blank"
-          href="http://www.instagram.com/maquinavisual"
+          href="https://www.linkedin.com/company/mucha-media/"
         >
-          <i className="fab fa-instagram fa-2x" />
-        </SocialLink>
-
-        <SocialLink target="_blank" href="http://www.linkeid.com/maquinavisual">
           <i className="fab fa-linkedin-in fa-2x" />
         </SocialLink>
 
-        <SocialLink target="_blank" href="https://vimeo.com/maquinavisual">
+        <SocialLink
+          target="_blank"
+          href="https://vimeo.com/channels/muchamedia"
+        >
           <i className="fab fa-vimeo-v fa-2x" />
         </SocialLink>
       </Social>
