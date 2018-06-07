@@ -49,7 +49,7 @@ const H2 = styled.h2`
   }
 `;
 
-const readingText = styled.p`
+const Description = styled.p`
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
@@ -142,7 +142,9 @@ const About = props => {
     about_image_small_4,
     text_about,
     about_us,
-    premios
+    premios,
+    descripcion,
+    description
   } = data;
 
   const premiosArray = {
@@ -164,6 +166,8 @@ const About = props => {
         <Image src={about_image_small_3.url} />
         <Image src={about_image_small_4.url} />
       </Images>
+
+      <Description>{language === "es" ? descripcion : description}</Description>
       <Prizes>
         {/* <Box>
           <div>
