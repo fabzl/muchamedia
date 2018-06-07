@@ -44,9 +44,9 @@ class Social extends Component {
           <i className="fab fa-facebook-f fa-2x" />
         </SocialLink>
 
-        {/* <SocialLink target="_blank" href="https://www.instagram.com/muchamedia">
+        <SocialLink target="_blank" href="https://www.instagram.com/muchamedia">
           <i className="fab fa-instagram fa-2x" />
-        </SocialLink> */}
+        </SocialLink>
 
         <SocialLink
           target="_blank"

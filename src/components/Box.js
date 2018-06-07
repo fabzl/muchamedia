@@ -82,7 +82,7 @@ const LinkTo = styled(Link)`
   color: ${colors.white};
   text-decoration: none;
   display: block;
-  height: 100%;
+  height: 100vh;
 `;
 
 class Box extends Component {
@@ -112,4 +112,7 @@ class Box extends Component {
   }
 }
 
-export default connect(null, { playVideo })(Box);
+export default connect(
+  null,
+  { playVideo }
+)(Box);
