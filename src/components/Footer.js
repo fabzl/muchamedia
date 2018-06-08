@@ -93,11 +93,10 @@ const LinkTo = styled.a`
   font-weight: 500;
   color: ${colors.white};
   text-decoration: none;
-  font-size: 16px;
-  padding-left: 10px;
+
   padding-right: 10px;
   font-size: 16px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   transition: 1s all;
   &:hover {
     color: ${colors.violet};
@@ -107,14 +106,16 @@ const LinkTo = styled.a`
     width: 100%;
     display: block;
     margin-bottom: 14px;
+    font-size: 2.5vw;
   }
 `;
 
 const ToTop = styled.a`
   color: ${colors.white};
-  font-size: 14px;
+  font-size: 10px;
   display: inline-block;
   overflow: hidden;
+  font-weight: 200;
   text-align: center;
   cursor: pointer;
   margin: 20px 0;

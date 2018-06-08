@@ -20,7 +20,7 @@ body {
     left: 0px;
     top: 0px;
   	width: auto; 
-	height: 100vh;	
+	  height: 100vh;	
  }
 
 
@@ -84,4 +84,29 @@ $color-line-5:#8100FF;
       @include longshadow($color-line-5, $color-bg, 100);
     }   
   }
+}
+
+
+.font-smooth
+{
+	text-rendering: optimizeLegibility;
+
+	-webkit-font-smoothing: antialiased;
+
+	-moz-osx-font-smoothing: grayscale;
+
+	font-smoothing: antialiased;
+
+	.is-android &
+	{
+		// ANDROID FIX (FOR DEVICES THAT DON'T SUPPORT THE ABOVE)
+
+		text-rendering: auto;
+
+		-webkit-font-smoothing: auto;
+
+		-moz-osx-font-smoothing: auto;
+
+		font-smoothing: auto;
+	}
 }

@@ -15,33 +15,32 @@ const Wrap = styled.div`
 `;
 
 const Acerca = styled.div`
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: ${colors.white};
   text-align: center;
-  max-width: 600px;
+  padding: 10% 20%;
   margin: 0 auto;
-  background: ${logo};
 `;
 
 const H2 = styled.h2`
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
-  line-height: 1em;
+  line-height: 1.2em;
   margin: 2rem 0 0.6em;
   letter-spacing: 130%;
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   padding: 0 10%;
   @media (min-width: 520px) {
-    font-size: 32px;
+    font-size: 30px;
     padding: 0;
   }
   @media (min-width: 720px) {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   &.dark {
@@ -53,18 +52,18 @@ const Description = styled.p`
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
-  line-height: 1em;
+  line-height: 1.2em;
   margin: 2rem 0 0.6em;
+  color: ${colors.white};
   letter-spacing: 130%;
   text-align: center;
-  font-size: 24px;
-  padding: 0 10%;
+  font-size: 15px;
+  padding: 0 30%;
   @media (min-width: 520px) {
-    font-size: 32px;
-    padding: 0;
+    font-size: 18px;
   }
   @media (min-width: 720px) {
-    font-size: 36px;
+    font-size: 22px;
   }
 
   &.dark {
@@ -156,7 +155,7 @@ const About = props => {
     <div>
       <Wrap src={props.data.about_image_big.url} />
       <Acerca>
-        <H2 className="title-part line-1">
+        <H2 className="title-part line-1 font-smooth">
           {language === "es" ? text_about : about_us}
         </H2>
       </Acerca>

@@ -4,6 +4,7 @@ import { Redirect } from "react-router";
 import { connect } from "react-redux";
 import MainImage from "../components/MainImage";
 import Desc from "../components/Desc";
+import translations from "../translations";
 
 const ShowWork = props => {
   // Filtrar a solamente los que tienen avatar_picture
@@ -23,7 +24,8 @@ const ShowWork = props => {
     descripcion_del_proyecto,
     project_description,
     vimeourl,
-    cliente
+    cliente,
+    web
   } = items[key].acf;
 
   // const postContentData = items[key].content.rendered;
@@ -52,6 +54,7 @@ const ShowWork = props => {
           language === "es" ? descripcion_del_proyecto : project_description
         }
         client={cliente}
+        web={web}
         language={language}
       />
     </div>

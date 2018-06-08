@@ -128,7 +128,6 @@ class VideoPlayer extends Component {
               playing={this.state.playing}
               wrapper={Player}
               onEnded={this.videoEnd}
-              onReady={this.videoReady}
               width="100%"
               allow="autoplay; fullscreen"
               height="100vh"
@@ -147,4 +146,7 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { stopVideo })(VideoPlayer);
+export default connect(
+  mapStateToProps,
+  { stopVideo }
+)(VideoPlayer);

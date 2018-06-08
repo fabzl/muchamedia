@@ -35,6 +35,16 @@ const Dl = styled.dl`
   text-align: center;
 `;
 
+const WebLink = styled.a`
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 20px 0 3px;
+  color: ${colors.white};
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.8rem;
+`;
+
 const Dt = styled.dt`
   font-weight: 700;
   text-transform: uppercase;
@@ -51,8 +61,11 @@ const Desc = props => (
       <H2>{props.title}</H2>
       <Description>{props.desc}</Description>
       <Dl>
-        <Dt>{translations.item.client[props.language]}</Dt>
         <Dd>{props.client}</Dd>
+
+        <WebLink href={"http://" + props.web} target="_blank">
+          {props.web}
+        </WebLink>
       </Dl>
     </Container>
   </Section>

@@ -33,6 +33,7 @@ const LinkTo = styled(NavLink)`
   display: inline-block;
   font-size: 1.1em;
   margin: 0 20px;
+  font-family: "ZonaPro-Bold";
   align-items: center;
   line-height: 1em;
   text-transform: uppercase;

@@ -16,7 +16,7 @@ const VideoContainer = styled.div`
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 `;
 
@@ -105,7 +105,7 @@ const H2 = styled.h2`
 
 WebFont.load({
   google: {
-    families: ["Poppins:800", "sans-serif"]
+    families: ["Poppins:800", "Arial"]
   }
 });
 

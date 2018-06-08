@@ -1,16 +1,4 @@
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-
-  font-family: 'ZonaPro-Bold';
-}
-
-
-
 @font-face {
 	font-family: 'ZonaPro-Thin';
 	src: url('././fonts/ZonaPro-Thin.eot');
@@ -30,8 +18,20 @@ h6 {
 
 
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 
-p {
+  font-family: 'ZonaPro-Bold';
+}
+
+
+
+
+p,  a{
   font-family: 'ZonaPro-Thin';
 }
 

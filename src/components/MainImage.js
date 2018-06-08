@@ -41,8 +41,8 @@ const Wrap = styled.div`
 `;
 
 const H1 = styled.h1`
-  /* margin-bottom: 0; */
-  font-size: 62px;
+  margin: 0;
+  font-size: 52px;
   line-height: 1em;
   text-transform: uppercase;
   font-weight: 700;
@@ -64,18 +64,6 @@ const Arrow = styled(Link)`
   }
 `;
 
-// const Left = styled.span`
-//   &:hover {
-//     padding-left: 15px;
-//   }
-// `;
-
-// const Right = styled.span`
-//   &:hover {
-//     padding-right: 15px;
-//   }
-// `;
-
 const Center = styled.div`
   display: flex;
   align-items: center;
@@ -84,8 +72,12 @@ const Center = styled.div`
 `;
 
 const Play = styled.div`
+  cursor: pointer;
   &:hover {
     opacity: 0.8;
+  }
+  & i {
+    width: 0.5em;
   }
 `;
 
@@ -98,7 +90,7 @@ const MainImage = props => (
     <Center>
       <H1>{props.nombre_del_proyecto}</H1>
       <Play onClick={() => props.playVideo(props.videoUrl)}>
-        <i className="far fa-play-circle fa-10x" />
+        <i className="far fa-play-circle fa-5x" />
       </Play>
     </Center>
 
@@ -108,4 +100,7 @@ const MainImage = props => (
   </Wrap>
 );
 
-export default connect(null, { playVideo })(MainImage);
+export default connect(
+  null,
+  { playVideo }
+)(MainImage);
