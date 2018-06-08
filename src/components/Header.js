@@ -162,6 +162,7 @@ const NavContainer = styled.div`
     &.active {
       display: flex;
       top: 0;
+      left: 0;
       position: fixed;
       width: 100vw;
       height: 100%;
