@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "../styles/globals";
 import WebFont from "webfontloader";
+import Parser from "html-react-parser";
 
 const Section = styled.section`
   height: ${props => (props.contact ? 80 : 100)}vh;
@@ -38,12 +39,12 @@ const Video = styled.video`
 
 const Text = styled.div`
   z-index: 20;
-  padding: 40px 80px;
   /* top: 50%; */
   pointer-events: none;
   /* opacity: 0; */
   transition: opacity 1.3s;
-  width: 93.3333%;
+  width: 100%;
+
   @media (max-width: 2000px) {
     max-width: 1600px;
   }
@@ -52,28 +53,20 @@ const Text = styled.div`
   color: ${colors.white};
 `;
 
-const H2 = styled.h2`
-  font-family: "Poppins:800", "Futura";
-  margin: 0 auto;
-  padding: 0 20px;
-  transform: translateX(-1px);
-  display: inline-block;
-  transition: line-height 1s;
+const H1 = styled.h1`
+  display: inline-flex;
+  z-index: 300;
+  color: ${colors.white};
+  letter-spacing: 130%;
+  /* line-height: 2rem; */
+  font-family: "FuturaBold", "Futura", "Verdana";
+  font-size: 3vmax;
+  font-weight: 600;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-transform: uppercase;
-  font-weight: 900;
-  font-style: bold;
   text-align: center;
-  text-shadow: 0px 1px 0px #999;
-
-  font-size: 32px;
-  line-height: 1.2em;
-
-  @media (min-width: 520px) {
-    font-size: 42px;
-  }
-  @media (min-width: 720px) {
-    font-size: 62px;
-  }
 
   &::after,
   &::before {
@@ -124,7 +117,7 @@ export default props => {
       </VideoContainer>
 
       <Text>
-        <H2>{props.title}</H2>
+        <H1>{Parser(props.title)}</H1>
       </Text>
     </Section>
   );
