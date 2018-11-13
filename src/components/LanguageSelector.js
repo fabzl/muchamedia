@@ -12,15 +12,14 @@ const H2 = styled.div`
   text-align: center;
   color: ${colors.white};
   border: 1px solid ${colors.white};
-  padding: 5px;
-  min-width: 32px;
-  padding-top: 8px;
-  margin-right: 50px;
+  padding: 0.5rem;
+  padding-top: 0.8rem;
+  margin-right: 5rem;
   transition: 0.7s all;
   @media (max-width: 740px) {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 2rem;
+    left: 2rem;
   }
   &:hover {
     background-color: ${colors.white};
@@ -45,4 +44,7 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { changeLang })(LanguageSelector);
+export default connect(
+  mapStateToProps,
+  { changeLang }
+)(LanguageSelector);

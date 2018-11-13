@@ -32,10 +32,10 @@ const LinkTo = styled(NavLink)`
   text-decoration: none;
   display: inline-block;
   font-size: 1.1em;
-  margin: 0 20px;
+  margin: 0 2rem;
   font-family: "ZonaPro-Bold";
   align-items: center;
-  line-height: 1em;
+  line-height: 1rem;
   text-transform: uppercase;
   transition: 1s all;
   background: transparent;
@@ -60,28 +60,29 @@ const LinkTo = styled(NavLink)`
 
 const LogoContainer = styled.div`
   margin-right: auto;
-  margin-top: 25px;
+  margin-top: 2.5rem;
+  width: 20vmax;
 `;
 
 const Logo = styled.img`
   width: 80%;
 
   @media (min-width: 740px) {
-    min-width: 30px;
+    min-width: 3rem;
   }
 `;
 
 const Burger = () => (
-  <svg width="30px" height="30px" fill={colors.white}>
-    <rect y="7" width="30" height="2" />
-    <rect y="15" width="30" height="2" />
-    <rect y="23" width="30" height="2" />
+  <svg width="3rem" height="3rem" fill={colors.white}>
+    <rect y="0.7rem" width="3rem" height="0.2rem" />
+    <rect y="1.5rem" width="3rem" height="0.2rem" />
+    <rect y="2.3rem" width="3rem" height="0.2rem" />
   </svg>
 );
 
 const ToTop = styled.a`
   color: ${colors.white};
-  font-size: 14px;
+  font-size: 1.4rem;
   display: inline-block;
   overflow: hidden;
   text-align: center;
@@ -118,8 +119,8 @@ const BackToTop = styled.div`
     display: none;
     &.active {
       display: flex;
-      bottom: 10px;
-      right: 10px;
+      bottom: 1rem;
+      right: 1rem;
       position: fixed;
     }
   }
@@ -128,7 +129,7 @@ const BackToTop = styled.div`
 const BurgerLink = styled.a`
   z-index: 50000;
   color: ${colors.white};
-  margin: 0 20px;
+  margin: 0 2rem;
 
   @media (min-width: 740px) {
     display: none;
@@ -139,13 +140,13 @@ const BurgerLink = styled.a`
   }
   &.open {
     rect:nth-child(1) {
-      transform: translate(10px, 0px) rotate(45deg);
+      transform: translate(1rem, 0) rotate(45deg);
     }
     rect:nth-child(2) {
       opacity: 0;
     }
     rect:nth-child(3) {
-      transform: translate(-13px, 10px) rotate(-45deg);
+      transform: translate(-1.3rem, 1rem) rotate(-45deg);
     }
   }
 `;
@@ -179,12 +180,7 @@ class Header extends React.Component {
   state = {
     openMenu: false
   };
-  componentDidMount() {
-    // console.log(
-    //   "soy component did mount y me gusta flotar : ",
-    //   this.state.openMenu
-    // );
-  }
+  componentDidMount() {}
 
   openMenu = () => {
     this.setState({ openMenu: !this.state.openMenu });
@@ -215,10 +211,6 @@ class Header extends React.Component {
           <LinkTo onClick={this.checkMobileNav} to="/">
             {translations.header.home[language]}
           </LinkTo>
-
-          {/* <LinkTo onClick={this.checkMobileNav} to="/reel">
-            {translations.header.reel[language]}
-          </LinkTo> */}
 
           <LinkTo onClick={this.checkMobileNav} to="/work">
             {translations.header.work[language]}

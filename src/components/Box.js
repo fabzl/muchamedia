@@ -31,7 +31,7 @@ const Content = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 20px;
+  padding: 2remm;
   background: rgba(68, 48, 79, 0.6);
   opacity: 0;
   transition: opacity 0.3s;
@@ -41,25 +41,25 @@ const Content = styled.div`
   color: ${colors.white};
 
   h4 {
-    margin: 0 0 10px;
-    font-size: 21px;
+    margin: 0 0 1rem;
+    font-size: 2.1rem;
     font-weight: 500;
     text-transform: uppercase;
     font-style: italic;
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-20rem);
   }
 
   h3 {
-    font-size: 42px;
+    font-size: 4.2rem;
     font-weight: 700;
     font-style: italic;
     text-transform: uppercase;
     color: ${colors.red};
-    padding: 0.33em 10px 5px;
+    padding: 0.33rem 1rem 0.5rem;
     margin: 0;
     line-height: 1em;
-    transform: translateX(200px);
+    transform: translateX(20rem);
   }
 
   h3,

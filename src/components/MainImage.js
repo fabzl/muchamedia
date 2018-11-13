@@ -14,7 +14,7 @@ const Wrap = styled.div`
   background: url(${props => props.src}) no-repeat center;
   background-size: cover;
   color: ${colors.white};
-  font-size: 16px;
+  font-size: 1.6rem;
   & a:first-child:hover {
     background: linear-gradient(
       90deg,
@@ -23,7 +23,7 @@ const Wrap = styled.div`
       rgba(0, 0, 0, 0)
     );
     & svg {
-      margin-left: 15px;
+      margin-left: 1.5rem;
     }
   }
 
@@ -35,14 +35,14 @@ const Wrap = styled.div`
       rgba(0, 0, 0, 0)
     );
     & svg {
-      margin-right: 15px;
+      margin-right: 1.5rem;
     }
   }
 `;
 
 const H1 = styled.h1`
   margin: 0;
-  font-size: 52px;
+  font-size: 5.2rem;
   line-height: 1em;
   text-transform: uppercase;
   font-weight: 700;

@@ -35,8 +35,8 @@ const Content = styled.div`
 
 const CloseButton = styled.div`
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 1rem;
+  top: 1rem;
   color: #ddd;
   &:hover {
     opacity: 0.5;

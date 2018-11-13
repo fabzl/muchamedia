@@ -39,15 +39,9 @@ const Video = styled.video`
 
 const Text = styled.div`
   z-index: 20;
-  /* top: 50%; */
   pointer-events: none;
-  /* opacity: 0; */
   transition: opacity 1.3s;
   width: 100%;
-
-  @media (max-width: 2000px) {
-    max-width: 1600px;
-  }
   text-align: center;
   margin: 0 auto;
   color: ${colors.white};
@@ -80,19 +74,19 @@ const H1 = styled.h1`
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     position: absolute;
     top: 50%;
-    margin-top: -15px;
+    margin-top: -1.5rem;
     transform: translateZ(0);
-    width: 70px;
+    width: 7rem;
     @media (min-width: 520px) {
     }
   }
 
   &::before {
-    left: -70px;
+    left: -7rem;
   }
 
   &::after {
-    right: -70px;
+    right: -7rem;
   }
 `;
 

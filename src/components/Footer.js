@@ -14,23 +14,23 @@ import Social from "./Social";
 const Logo = styled.img`
   width: 68%;
   @media (min-width: 500px) {
-    min-width: 150px;
+    min-width: 15rem;
     width: 50%;
   }
   margin: 0 auto;
   display: flex;
-  max-width: 300px;
+  max-width: 30rem;
 `;
 
 const Wrap = styled.footer`
   z-index: 50;
   padding: 3.5rem 4rem 2rem;
-  min-height: 150px;
+  min-height: 15rem;
   display: block;
-  padding-bottom: 20px;
+  padding-bottom: 2rem;
 
   @media (max-width: 740px) {
-    padding-bottom: 40px;
+    padding-bottom: 4rem;
   }
 `;
 
@@ -49,20 +49,9 @@ const General = styled.div`
   flex-direction: column;
   a > svg {
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 1rem;
   }
 `;
-
-// const H4 = styled.h4`
-//   font-weight: 500;
-//   margin: 0;
-//   font-size: 14px;
-//   font-style: italic;
-//   text-transform: uppercase;
-//   letter-spacing: 130%;
-//   white-space: nowrap;
-//   font-family: "poppins";
-// `;
 
 const BackToTop = styled.div`
   flex: 1;
@@ -74,29 +63,19 @@ const BackToTop = styled.div`
 `;
 
 const Links = styled.div`
-  margin-top: 10px;
+  margin-top: 1rem;
   @media (max-width: 740px) {
     flex-direction: column;
     text-align: left;
   }
 `;
 
-// const H6 = styled.h6`
-//   @media (max-width: 740px) {
-//     font-size: 12px;
-//   }
-// `;
-
-// const Link = styled(NavLink)``;
-
 const LinkTo = styled.a`
   font-weight: 500;
   color: ${colors.white};
   text-decoration: none;
-
-  padding-right: 10px;
-  font-size: 16px;
-  /* white-space: nowrap; */
+  padding-right: 1rem;
+  font-size: 1.6rem;
   transition: 1s all;
   &:hover {
     color: ${colors.violet};
@@ -105,20 +84,20 @@ const LinkTo = styled.a`
   @media (max-width: 740px) {
     width: 100%;
     display: block;
-    margin-bottom: 14px;
+    margin-bottom: 1.4rem;
     font-size: 2.5vw;
   }
 `;
 
 const ToTop = styled.a`
   color: ${colors.white};
-  font-size: 10px;
+  font-size: 1rem;
   display: inline-block;
   overflow: hidden;
   font-weight: 200;
   text-align: center;
   cursor: pointer;
-  margin: 20px 0;
+  margin: 2rem 0;
   text-decoration: none;
 
   > span {
@@ -152,10 +131,6 @@ const Footer = props => (
       <Social />
       <General>
         <Links>
-          <LinkTo href={"tel:" + props.dataContact.telefono_de_contacto}>
-            <i className="fas fa-mobile-alt fa-2x" />
-            {props.dataContact.telefono_de_contacto}
-          </LinkTo>
           <LinkTo
             href={
               "mailto:" +
@@ -166,6 +141,10 @@ const Footer = props => (
           >
             <i className="far fa-envelope fa-2x" />
             {props.dataContact.mail_de_contacto}
+          </LinkTo>
+          <LinkTo href={"tel:" + props.dataContact.telefono_de_contacto}>
+            <i className="fas fa-mobile-alt fa-2x" />
+            {props.dataContact.telefono_de_contacto}
           </LinkTo>
         </Links>
       </General>

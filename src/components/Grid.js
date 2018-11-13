@@ -43,7 +43,7 @@ class Grid extends Component {
     const Wrap = styled.div`
       display: grid;
       grid-template-columns: ${this.setfullWidth() ? "1fr" : "2fr 2fr"};
-      grid-auto-rows: 430px;
+      grid-auto-rows: 43rem;
       & div:last-child:nth-child(odd) {
         grid-column: 1 / 3;
       }

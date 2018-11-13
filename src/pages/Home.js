@@ -31,7 +31,7 @@ const LinkTo = styled(Link)`
   color: ${colors.white};
   text-decoration: none;
   display: block;
-  padding: 55px 0 45px;
+  padding: 5.5rem 0 4.5rem;
   transition: all 1s;
   &:hover {
     color: ${colors.black};

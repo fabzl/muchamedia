@@ -21,8 +21,6 @@ const Modal = styled.div`
 const Holder = styled.div`
   top: ${props => (props.showHolder ? 0 : "50%")};
   bottom: ${props => (props.showHolder ? 0 : "50%")};
-  /* left: 100px;
-  right: 100px; */
   position: absolute;
   overflow: hidden;
   transition: top 0.5s, bottom 0.5s, opacity 0.3s;
@@ -57,7 +55,7 @@ const Player = styled.div`
 
 const Close = styled.a`
   display: inline-block;
-  font: normal normal normal 14px/1 "icons";
+  font: normal normal normal 1.4rem/1 "icons";
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -65,8 +63,8 @@ const Close = styled.a`
   position: absolute;
   top: 50%;
   right: 2.6%;
-  padding: 2px;
-  font-size: 62px;
+  padding: 0.2rem;
+  font-size: 6.2rem;
   color: ${colors.white};
   text-decoration: none;
   margin: -26vw -0.5em 0;

@@ -4,11 +4,11 @@ import translations from "../translations";
 import { colors } from "../styles/globals";
 
 const Section = styled.div`
-  padding: 40px 0 20px;
+  padding: 4rem 0 2rem;
 `;
 
 const Container = styled.div`
-  max-width: 600px;
+  max-width: 60rem;
   margin: 0 auto;
   color: ${colors.white};
   text-align: center;
@@ -23,13 +23,13 @@ const H2 = styled.h2`
 `;
 
 const Description = styled.p`
-  font-size: 18px;
-  line-height: 1.2em;
+  font-size: 1.8rem;
+  line-height: 1.2rem;
 `;
 
 const Dl = styled.dl`
-  margin: 10px 0;
-  font-size: 20px;
+  margin: 1rem 0;
+  font-size: 2rem;
   font-style: italic;
   line-height: 1.6em;
   text-align: center;
@@ -38,21 +38,21 @@ const Dl = styled.dl`
 const WebLink = styled.a`
   font-weight: 700;
   text-transform: uppercase;
-  margin: 20px 0 3px;
+  margin: 2rem 0 3rem;
   color: ${colors.white};
   text-decoration: none;
-  font-size: 15px;
+  font-size: 1.5rem;
   letter-spacing: 0.8rem;
 `;
 
 const Dt = styled.dt`
   font-weight: 700;
   text-transform: uppercase;
-  margin: 20px 0 3px;
+  margin: 2rem 0 3rem;
 `;
 
 const Dd = styled.dd`
-  margin: 3px 0 20px;
+  margin: 3rem 0 2rem;
 `;
 
 const Desc = props => (
