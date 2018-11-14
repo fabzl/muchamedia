@@ -16,8 +16,7 @@ const Overlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: #000;
-
-  z-index: 9999; /* Specify a stack order in case you're using a different order for other elements */
+  z-index: 9998; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
   /* transition: opacity 300ms ease-in-out;
   opacity: 0; */
@@ -25,7 +24,7 @@ const Overlay = styled.div`
 
 const Content = styled.div`
   display: block;
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
@@ -37,6 +36,7 @@ const CloseButton = styled.div`
   position: absolute;
   right: 1rem;
   top: 1rem;
+  z-index: 99999;
   color: #ddd;
   &:hover {
     opacity: 0.5;
@@ -71,7 +71,7 @@ class Modal extends Component {
             autoPlay
             controls
             width="100%"
-            height="100vh"
+            height="95vh"
             onEnded={this.videoEnd}
           />
         </Content>

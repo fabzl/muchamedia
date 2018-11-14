@@ -31,7 +31,7 @@ const LinkTo = styled(NavLink)`
   color: ${colors.white};
   text-decoration: none;
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   margin: 0 2rem;
   font-family: "ZonaPro-Bold";
   align-items: center;
@@ -45,7 +45,7 @@ const LinkTo = styled(NavLink)`
   }
 
   @media (max-width: 740px) {
-    font-size: 2.4em;
+    font-size: 1.6rem;
     margin: auto;
     margin-top: 7vh;
     &:first-child {
@@ -60,8 +60,13 @@ const LinkTo = styled(NavLink)`
 
 const LogoContainer = styled.div`
   margin-right: auto;
-  margin-top: 2.5rem;
+  margin-left: 2rem;
+  margin-top: 1.5rem;
   width: 20vmax;
+  @media (min-width: 740px) {
+    margin-top: 2.5rem;
+    width: 30vmax;
+  }
 `;
 
 const Logo = styled.img`
@@ -73,10 +78,10 @@ const Logo = styled.img`
 `;
 
 const Burger = () => (
-  <svg width="3rem" height="3rem" fill={colors.white}>
-    <rect y="0.7rem" width="3rem" height="0.2rem" />
-    <rect y="1.5rem" width="3rem" height="0.2rem" />
-    <rect y="2.3rem" width="3rem" height="0.2rem" />
+  <svg width="30px" height="30px" fill={colors.white}>
+    <rect y="7px" width="30px" height="2px" />
+    <rect y="15px" width="30px" height="2px" />
+    <rect y="23px" width="30px" height="2px" />
   </svg>
 );
 

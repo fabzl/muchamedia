@@ -23,8 +23,8 @@ const H2 = styled.h2`
 `;
 
 const Description = styled.p`
-  font-size: 1.8rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
 `;
 
 const Dl = styled.dl`

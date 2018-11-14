@@ -71,11 +71,12 @@ const Links = styled.div`
 `;
 
 const LinkTo = styled.a`
-  font-weight: 500;
+  font-weight: 600;
   color: ${colors.white};
   text-decoration: none;
   padding-right: 1rem;
-  font-size: 1.6rem;
+  font-size: 0.9rem;
+  letter-spacing: 130%;
   transition: 1s all;
   &:hover {
     color: ${colors.violet};
@@ -85,7 +86,6 @@ const LinkTo = styled.a`
     width: 100%;
     display: block;
     margin-bottom: 1.4rem;
-    font-size: 2.5vw;
   }
 `;
 

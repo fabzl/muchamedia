@@ -24,6 +24,8 @@ class Grid extends Component {
         avatar_picture: { url },
         nombre_del_proyecto,
         project_name,
+        categoria,
+        category,
         cliente
       } = item.acf;
       return (
@@ -31,6 +33,7 @@ class Grid extends Component {
           key={item.id}
           image={url}
           title={language === "es" ? nombre_del_proyecto : project_name}
+          category={language === "es" ? categoria : category}
           client={cliente}
           videoUrl={item.acf.vimeourl}
           link={this.props.link ? item.slug : null}

@@ -85,6 +85,14 @@ const LinkTo = styled(Link)`
   height: 100vh;
 `;
 
+const Category = styled.p`
+  color: ${colors.white};
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: ${colors.black};
+`;
+
 class Box extends Component {
   handleLink = e => {
     if (!this.props.link) {
@@ -96,6 +104,7 @@ class Box extends Component {
   render() {
     return (
       <Wrap src={this.props.image}>
+        <Category>{this.props.category} </Category>
         <LinkTo
           to={this.props.link ? `/work/${this.props.link}` : "/"}
           onClick={this.handleLink}

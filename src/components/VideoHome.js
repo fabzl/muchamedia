@@ -68,7 +68,6 @@ const H1 = styled.h1`
     display: none;
     /* display: block; */
     width: 0;
-
     border-top: 3px solid ${colors.white};
     transition: width 0.6s 0.2s, left 0.6s 0.2s, right 0.6s 0.2s;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
