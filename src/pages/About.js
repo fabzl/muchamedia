@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 
 import laurel from "../img/laurels_black.svg";
-import translations from "../translations";
-import logo from "../img/logo_loader.svg";
+//import translations from "../translations";
+//import logo from "../img/logo_loader.svg";
 
 import { colors } from "../styles/globals";
 
