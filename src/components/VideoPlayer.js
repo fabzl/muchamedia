@@ -94,10 +94,6 @@ class VideoPlayer extends Component {
     }
   };
 
-  componentDidMount() {
-    // this.player = new Player(this.iframe);
-  }
-
   closeVideo = async () => {
     this.setState({ showHolder: false, playing: false });
     this.props.stopVideo();

@@ -12,7 +12,7 @@ const Loader = props => {
     top: 0;
     left: 0;
     z-index: 999999;
-    /* display: ${props.visible ? "grid" : "none"}; */
+    display: "none";
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(7, 1fr);

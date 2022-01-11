@@ -44,14 +44,8 @@ const CloseButton = styled.div`
 `;
 
 class Modal extends Component {
-  componentDidMount() {
-    // disableScroll();
-  }
 
-  componentWillUnmount() {
-    // enableScroll();
-    // window.scrollTo(0, this.props.scrollY);
-  }
+
 
   videoEnd = () => {
     console.log("videoEND");

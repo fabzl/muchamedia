@@ -32,14 +32,16 @@ const Wrap = styled.div`
 `;
 
 class App extends Component {
-  componentDidMount() {
-    this.props.fetchData();
-    this.props.loaderLoading();
+  constructor(props) {
+    super();
+    props.fetchData();
+    props.loaderLoading();
     // window.scrollTo(0, 0);
+    //console.log("constructor")
   }
 
   setToDestroy = props => {
-    this.props.contentLoaded();
+    props.contentLoaded();
   };
 
   render() {
@@ -48,7 +50,7 @@ class App extends Component {
     return (
       <Wrap {...this.props}>
         {this.setToDestroy()}
-        <Loader />
+
         <Fade in={this.props.showVideo}>
           <Modal />
         </Fade>

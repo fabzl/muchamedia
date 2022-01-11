@@ -4,7 +4,7 @@ import { Redirect } from "react-router";
 import { connect } from "react-redux";
 import MainImage from "../components/MainImage";
 import Desc from "../components/Desc";
-import translations from "../translations";
+//import translations from "../translations";
 
 const ShowWork = props => {
   // Filtrar a solamente los que tienen avatar_picture

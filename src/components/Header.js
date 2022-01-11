@@ -185,7 +185,6 @@ class Header extends React.Component {
   state = {
     openMenu: false
   };
-  componentDidMount() {}
 
   openMenu = () => {
     this.setState({ openMenu: !this.state.openMenu });

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import translations from "../translations";
+//import translations from "../translations";
 import { colors } from "../styles/globals";
 
 const Section = styled.div`
@@ -45,11 +45,6 @@ const WebLink = styled.a`
   letter-spacing: 0.8rem;
 `;
 
-const Dt = styled.dt`
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 2rem 0 3rem;
-`;
 
 const Dd = styled.dd`
   margin: 3rem 0 2rem;

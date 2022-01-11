@@ -1,11 +1,4 @@
-// const images = [
-//   'http://www.maquinavisual.com/blog/wp-content/uploads/2018/01/pinchintun-1024x576.jpg',
-//   'http://www.maquinavisual.com/blog/wp-content/uploads/2018/01/ballena-1024x494.png',
-//   'http://www.maquinavisual.com/blog/wp-content/uploads/2018/01/001-personas-sirena.jpg',
-//   'http://www.maquinavisual.com/blog/wp-content/uploads/2018/01/perro-300x167.png',
-//   'http://www.maquinavisual.com/blog/wp-content/uploads/2018/01/xiao-169x300.jpg',
-//   'http://www.maquinavisual.com/blog/wp-content/uploads/2018/01/biologiga-300x300.jpg'
-// ];
+
 
 export const data = [
   {

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
-import laurel from "../img/laurels_black.svg";
+//import laurel from "../img/laurels_black.svg";
 //import translations from "../translations";
 //import logo from "../img/logo_loader.svg";
 
@@ -70,7 +70,7 @@ const Description = styled.p`
     color: ${colors.black};
   }
 `;
-
+/* 
 const Laurel = styled.div`
   font-weight: 700;
   font-style: italic;
@@ -90,7 +90,7 @@ const Laurel = styled.div`
     display: flex;
     align-items: center;
   }
-`;
+`; */
 
 const Images = styled.div`
   display: grid;
@@ -113,7 +113,7 @@ const Prizes = styled.div`
   flex-direction: row;
 `;
 
-const Box = styled.div`
+/* const Box = styled.div`
   flex-direction: row;
   padding: 15px 0;
   flex: 1;
@@ -129,7 +129,8 @@ const Box = styled.div`
   padding-bottom: 100px;
 `;
 
-const Item = ({ item }) => <Laurel>{item}</Laurel>;
+ */
+//const Item = ({ item }) => <Laurel>{item}</Laurel>;
 
 const About = props => {
   const { data, language } = props;
@@ -141,16 +142,16 @@ const About = props => {
     about_image_small_4,
     text_about,
     about_us,
-    premios,
+  //  premios,
     descripcion,
     description
   } = data;
 
-  const premiosArray = {
+ /*  const premiosArray = {
     es: premios.split(" // "),
     en: premios.split(" // ")
   };
-
+ */
   return (
     <div>
       <Wrap src={props.data.about_image_big.url} />
