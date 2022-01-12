@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   setToDestroy = props => {
-    props.contentLoaded();
+    this.props.contentLoaded();
   };
 
   render() {
@@ -50,7 +50,7 @@ class App extends Component {
     return (
       <Wrap {...this.props}>
         {this.setToDestroy()}
-
+        <Loader />
         <Fade in={this.props.showVideo}>
           <Modal />
         </Fade>

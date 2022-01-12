@@ -24,10 +24,10 @@ if (
     navigator.userAgent.indexOf("Chrome") &&
     process.env.NODE_ENV === "development"
   ) {
-    middleware.push(
+    /* middleware.push(
       window.__REDUX_DEVTOOLS_EXTENSION__ &&
         window.__REDUX_DEVTOOLS_EXTENSION__()
-    );
+    ); */
   }
 }
 

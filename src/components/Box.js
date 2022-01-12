@@ -91,6 +91,10 @@ const Category = styled.p`
   left: 0;
   top: 0;
   background: ${colors.black};
+  padding:0 10px;
+  text-transform:uppercase;
+  font-size: 1.3rem;
+  font-weight: 700;
 `;
 
 class Box extends Component {
