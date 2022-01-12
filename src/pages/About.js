@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 
 //import laurel from "../img/laurels_black.svg";
-//import translations from "../translations";
-//import logo from "../img/logo_loader.svg";
+import translations from "../translations";
 
 import { colors } from "../styles/globals";
 
@@ -70,7 +69,7 @@ const Description = styled.p`
     color: ${colors.black};
   }
 `;
-/* 
+
 const Laurel = styled.div`
   font-weight: 700;
   font-style: italic;
@@ -83,14 +82,13 @@ const Laurel = styled.div`
   text-align: center;
   overflow: visible;
   position: relative;
-  background: url(${laurel}) no-repeat;
   background-size: cover;
   padding: 25px 30px;
   &:first-child {
     display: flex;
     align-items: center;
   }
-`; */
+`; 
 
 const Images = styled.div`
   display: grid;
@@ -113,7 +111,7 @@ const Prizes = styled.div`
   flex-direction: row;
 `;
 
-/* const Box = styled.div`
+ const Box = styled.div`
   flex-direction: row;
   padding: 15px 0;
   flex: 1;
@@ -126,11 +124,10 @@ const Prizes = styled.div`
     ${colors.orange} 0%,
     ${colors.violet} 100%
   );
-  padding-bottom: 100px;
 `;
 
- */
-//const Item = ({ item }) => <Laurel>{item}</Laurel>;
+ 
+const Item = ({ item }) => <Laurel>{item}</Laurel>;
 
 const About = props => {
   const { data, language } = props;
@@ -142,16 +139,16 @@ const About = props => {
     about_image_small_4,
     text_about,
     about_us,
-  //  premios,
+    premios,
     descripcion,
     description
   } = data;
 
- /*  const premiosArray = {
+   const premiosArray = {
     es: premios.split(" // "),
     en: premios.split(" // ")
   };
- */
+ 
   return (
     <div>
       <Wrap src={props.data.about_image_big.url} />
@@ -161,15 +158,15 @@ const About = props => {
         </H2>
       </Acerca>
       <Images>
-        <Image src={about_image_small_1.url} />
-        <Image src={about_image_small_2.url} />
-        <Image src={about_image_small_3.url} />
-        <Image src={about_image_small_4.url} />
+       { (about_image_small_1 === false ) ? "":<Image src={about_image_small_1.url} />}
+       { (about_image_small_2 === false ) ? "":<Image src={about_image_small_2.url} />}
+       { (about_image_small_3 === false ) ? "":<Image src={about_image_small_3.url} />}
+       { (about_image_small_4 === false ) ? "":<Image src={about_image_small_4.url} />}
       </Images>
 
       <Description>{language === "es" ? descripcion : description}</Description>
       <Prizes>
-        {/* <Box>
+        <Box>
           <div>
             <H2 className="dark">
               {translations.about.prizes[props.language]}
@@ -180,7 +177,7 @@ const About = props => {
               </div>
             ))}
           </div> 
-        </Box>*/}
+        </Box>
       </Prizes>
     </div>
   );
