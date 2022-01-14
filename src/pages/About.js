@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
-//import laurel from "../img/laurels_black.svg";
+import laurel from "../img/laurels_black.svg";
 import translations from "../translations";
 
 import { colors } from "../styles/globals";
@@ -70,24 +70,8 @@ const Description = styled.p`
   }
 `;
 
-const Laurel = styled.div`
-  font-weight: 700;
-  font-style: italic;
-  text-transform: uppercase;
-  line-height: 1em;
-  margin: 0;
-  color: ${colors.black};
-  max-width: 180px;
-  min-height: 100px;
-  text-align: center;
-  overflow: visible;
-  position: relative;
-  background-size: cover;
-  padding: 25px 30px;
-  &:first-child {
-    display: flex;
-    align-items: center;
-  }
+const Laurel = styled.img`
+  
 `; 
 
 const Images = styled.div`
@@ -103,12 +87,18 @@ const Image = styled.div`
   background-size: cover;
 `;
 
-const Prizes = styled.div`
+const PrizeWrapper= styled.div`
   margin: 0 auto;
   display: flex;
-  color: ${colors.white};
-  flex: 1;
-  flex-direction: row;
+  text-align:center;
+  flex-direction: column;
+`;
+
+const Prizes = styled.div`
+  margin: 0 auto;
+  display: block;
+  color: ${colors.black};
+  
 `;
 
  const Box = styled.div`
@@ -127,10 +117,26 @@ const Prizes = styled.div`
 `;
 
  
-const Item = ({ item }) => <Laurel>{item}</Laurel>;
+const Item = ({ item, projectName }) => 
+      <Prizes> 
+         <div>
+            <projectNameText>{projectName}</projectNameText> 
+            <Laurel src={laurel}/><prizeNameText> {item.split("/")} </prizeNameText><Laurel src={laurel}/>
+         </div>  
+    </Prizes>;
+
+
 
 const About = props => {
-  const { data, language } = props;
+  const { data, language, posts } = props;
+
+  const items = posts
+  
+   //(posts;
+  //const { link } = props.posts.params;
+  //const key = items.map(element => element.slug).indexOf(link);
+
+
   const {
     // about_image_big,
     about_image_small_1,
@@ -139,15 +145,47 @@ const About = props => {
     about_image_small_4,
     text_about,
     about_us,
-    premios,
+    //premios,
+    //awards,
     descripcion,
     description
   } = data;
 
-   const premiosArray = {
-    es: premios.split(" // "),
-    en: premios.split(" // ")
+
+
+
+  //console.dir(items[0].acf.premios.split("/"))
+  //console.dir(items[0].acf.awards.split("/"))
+
+  console.dir(items)
+  const premiosArray = []
+  const awardsArray = []
+  const nombresArray = []
+  const namesArray = []
+
+  let i = 0 
+
+  for(i; i < items.length ; i++ ) {
+
+      premiosArray.push(items[i].acf.premios)
+      awardsArray.push(items[i].acf.awards)
+      nombresArray.push(items[i].acf.nombre_del_proyecto)
+      namesArray.push(items[i].acf.project_name)
+    }
+
+   const listadePremiosArray = {
+    es: premiosArray,
+    en: awardsArray
   };
+
+  
+  const listadeNombresArray = {
+    es: nombresArray,
+    en: namesArray
+  };
+
+
+  console.dir(listadeNombresArray[props.language][0])
  
   return (
     <div>
@@ -171,11 +209,15 @@ const About = props => {
             <H2 className="dark">
               {translations.about.prizes[props.language]}
             </H2>
-            {premiosArray[props.language].map(item => (
-              <div className="premio" key={item}>
-                <Item item={item} />
+            <PrizeWrapper>
+            {listadePremiosArray[props.language].map((item, i)  => (
+                 (!item ) ? "":
+              <div className="premio" key={i}>
+                <Item item={listadePremiosArray[props.language][i]} lang={props.language} projectName={listadeNombresArray[props.language][i]}>
+                </Item>
               </div>
             ))}
+            </PrizeWrapper>
           </div> 
         </Box>
       </Prizes>
@@ -186,6 +228,7 @@ const About = props => {
 const mapStateToProps = state => {
   return {
     data: state.data.pages[1].acf,
+    posts: state.data.posts,
     language: state.data.language
   };
 };
