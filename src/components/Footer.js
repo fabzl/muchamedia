@@ -142,10 +142,10 @@ const Footer = props => (
             <i className="far fa-envelope fa-2x" />
             {props.dataContact.mail_de_contacto}
           </LinkTo>
-          <LinkTo href={"tel:" + props.dataContact.telefono_de_contacto}>
+{/*           <LinkTo href={"tel:" + props.dataContact.telefono_de_contacto}>
             <i className="fas fa-mobile-alt fa-2x" />
             {props.dataContact.telefono_de_contacto}
-          </LinkTo>
+          </LinkTo> */}
         </Links>
       </General>
       <BackToTop>

@@ -71,15 +71,18 @@ const Description = styled.p`
 `;
 
 const Laurel = styled.img`
-  width:60%;
-  position:absolute;
-  left:20%
+width:60%;
+position:absolute;
+text-align: center;
+left: 0; 
+right: 0; 
+top:50%;
+margin-left: auto; 
+margin-right: auto;
+transform: translateY(-50%);
 
-  @media (max-width: 720px) {
-    width:90%;
-    left:5%
-  }
-
+@media (min-width: 1024px) {
+}
 
 `; 
 
@@ -101,10 +104,16 @@ const Prize= styled.div`
   text-align:center;
   flex-direction: column;
   align-self:  center;
+  width:100%;
+  position: relative;
+  @media (min-width: 1200px) {
+    min-height: 20vw;
+  }
+
 `;
 
 const Prizes = styled.div`
-  margin: 0 auto;
+  margin: 25 auto;
   display: block;
   color: ${colors.black};
   flex-direction: row;
@@ -112,29 +121,35 @@ const Prizes = styled.div`
 `;
 
  const Box = styled.div`
-  flex-direction: row;
+ 
+ flex-direction: column;
   padding: 15px 0;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 
   background: linear-gradient(
     45deg,
     ${colors.orange} 0%,
     ${colors.violet} 100%
   );
+ 
 `;
 const ProjectNameText = styled.h3`
     diplay:block;
     max-width: 50%;
     margin:  5% 25% 1% 25%;
-
+    font-weight:900;
     font-size: 1.6rem;
    
     @media (max-width: 720px) {
       font-size: 1.2rem;
     }
+    @media (min-width: 1600px) {
+      font-size: 2.6rem;
+     }
 
 `;
 const PrizeNameText = styled.p`
@@ -142,10 +157,13 @@ const PrizeNameText = styled.p`
     max-width: 40%; 
     margin:  0 30% 5% 30%;
     font-size: 1rem;
-    font-weight:700;
+    font-weight:900;
     @media (max-width: 720px) {
       font-size: 0.8rem;
     }
+    @media (min-width: 1600px) {
+      font-size: 2.2rem;
+     }
 `;
 const PrizeWrapper = styled.div`
     flex-direction: column;
