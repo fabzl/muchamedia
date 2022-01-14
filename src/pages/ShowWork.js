@@ -25,6 +25,8 @@ const ShowWork = props => {
     project_description,
     vimeourl,
     cliente,
+    awards,
+    premios,
     web
   } = items[key].acf;
 
@@ -57,6 +59,7 @@ const ShowWork = props => {
         web={web}
         language={language}
       />
+      
     </div>
   );
 };
