@@ -20,6 +20,17 @@ const H2 = styled.h2`
   text-transform: uppercase;
   line-height: 1em;
   margin: 2rem 0 0.6em;
+
+  font-size: 3.2rem;
+ 
+  @media (min-width: 520px) {
+    font-size: 2.2rem;
+    padding: 0;
+  }
+  @media (min-width: 1024px) {
+	font-size: 4.2rem;
+  }
+
 `;
 
 const Description = styled.p`

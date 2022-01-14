@@ -10,6 +10,7 @@ const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
   height: 100vh;
+  width: 100vw;
   align-items: center;
   background: url(${props => props.src}) no-repeat center;
   background-size: cover;
@@ -42,13 +43,18 @@ const Wrap = styled.div`
 
 const H1 = styled.h1`
   margin: 0;
-  font-size: 5.2rem;
+  font-size: 3.2rem;
   line-height: 1em;
   text-transform: uppercase;
   font-weight: 700;
   font-style: italic;
-  /* margin: 0 auto 0.6em; */
   text-align: center;
+  transform: translateY(-10vh);
+  max-width:80vw;
+ 
+  @media (max-width: 600px) {
+    font-size: 2.2rem;
+  }
 `;
 
 const Arrow = styled(Link)`
@@ -56,7 +62,7 @@ const Arrow = styled(Link)`
   height: 100%;
   align-items: center;
   display: flex;
-  width: 10%;
+  width: 10vw;
   justify-content: center;
   background: transparent;
   & svg {
@@ -69,6 +75,7 @@ const Center = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  max-width:80vw;
 `;
 
 const Play = styled.div`

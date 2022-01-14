@@ -222,7 +222,7 @@ const About = props => {
   };
 
 
-  console.dir(listadeNombresArray[props.language][0])
+ // console.dir(listadeNombresArray[props.language][0])
  
   return (
     <div>
