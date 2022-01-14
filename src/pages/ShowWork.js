@@ -27,7 +27,7 @@ const H2 = styled.h2`
     padding: 0;
   }
   @media (min-width: 1024px) {
-	font-size: 4rem;
+	font-size: 3rem;
   }
 
   &.dark {
@@ -72,7 +72,7 @@ const Prizes = styled.div`
  const Box = styled.div`
 
   padding: 15px 0;
-  width: 100%;
+  width: 100vw;
   flex: 1;
   display: flex;
   justify-content: center;

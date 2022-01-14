@@ -5,6 +5,7 @@ import { colors } from "../styles/globals";
 
 const Section = styled.div`
   padding: 4rem 0 2rem;
+  width:100vw;
 `;
 
 const Container = styled.div`
@@ -54,6 +55,15 @@ const WebLink = styled.a`
   text-decoration: none;
   font-size: 1.5rem;
   letter-spacing: 0.8rem;
+  
+  @media (max-width: 720px) {
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+  }
+  @media (max-width: 520px) {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
 `;
 
 
