@@ -44,6 +44,8 @@ const PrizeNameText = styled.p`
     @media (max-width: 720px) {
       font-size: 1.2rem;
     }
+	
+
 `;
 const PrizeWrapper = styled.div`
     flex-direction: column;
@@ -79,6 +81,7 @@ const Prizes = styled.div`
   align-items: center;
   position: relative;
   flex-direction: column;
+
 
   background: linear-gradient(
     45deg,
