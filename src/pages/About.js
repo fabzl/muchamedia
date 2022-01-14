@@ -71,7 +71,16 @@ const Description = styled.p`
 `;
 
 const Laurel = styled.img`
-  
+  width:60%;
+  position:absolute;
+  left:20%
+
+  @media (max-width: 720px) {
+    width:90%;
+    left:5%
+  }
+
+
 `; 
 
 const Images = styled.div`
@@ -87,18 +96,19 @@ const Image = styled.div`
   background-size: cover;
 `;
 
-const PrizeWrapper= styled.div`
-  margin: 0 auto;
+const Prize= styled.div`
   display: flex;
   text-align:center;
   flex-direction: column;
+  align-self:  center;
 `;
 
 const Prizes = styled.div`
   margin: 0 auto;
   display: block;
   color: ${colors.black};
-  
+  flex-direction: row;
+
 `;
 
  const Box = styled.div`
@@ -115,15 +125,42 @@ const Prizes = styled.div`
     ${colors.violet} 100%
   );
 `;
+const ProjectNameText = styled.h3`
+    diplay:block;
+    max-width: 50%;
+    margin:  5% 25% 1% 25%;
 
- 
+    font-size: 1.6rem;
+   
+    @media (max-width: 720px) {
+      font-size: 1.2rem;
+    }
+
+`;
+const PrizeNameText = styled.p`
+    flex-direction: column;
+    max-width: 40%; 
+    margin:  0 30% 5% 30%;
+    font-size: 1rem;
+    font-weight:700;
+    @media (max-width: 720px) {
+      font-size: 0.8rem;
+    }
+`;
+const PrizeWrapper = styled.div`
+    flex-direction: column;
+    display:flex;
+    justify-content:center;
+`;
+
 const Item = ({ item, projectName }) => 
-      <Prizes> 
+      <Prize> 
          <div>
-            <projectNameText>{projectName}</projectNameText> 
-            <Laurel src={laurel}/><prizeNameText> {item.split("/")} </prizeNameText><Laurel src={laurel}/>
-         </div>  
-    </Prizes>;
+            <ProjectNameText>{projectName}</ProjectNameText> 
+            <PrizeNameText>{item.split("/").join('\n')}</PrizeNameText>
+         </div> 
+         <Laurel src={laurel}/> 
+    </Prize>;
 
 
 
@@ -157,7 +194,7 @@ const About = props => {
   //console.dir(items[0].acf.premios.split("/"))
   //console.dir(items[0].acf.awards.split("/"))
 
-  console.dir(items)
+//  console.dir(items)
   const premiosArray = []
   const awardsArray = []
   const nombresArray = []
@@ -212,12 +249,12 @@ const About = props => {
             <PrizeWrapper>
             {listadePremiosArray[props.language].map((item, i)  => (
                  (!item ) ? "":
-              <div className="premio" key={i}>
-                <Item item={listadePremiosArray[props.language][i]} lang={props.language} projectName={listadeNombresArray[props.language][i]}>
+             
+                <Item key={i} item={listadePremiosArray[props.language][i]} lang={props.language} projectName={listadeNombresArray[props.language][i]}>
                 </Item>
-              </div>
+
             ))}
-            </PrizeWrapper>
+             </PrizeWrapper>
           </div> 
         </Box>
       </Prizes>
