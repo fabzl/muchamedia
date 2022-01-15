@@ -36,8 +36,8 @@ const Translations = {
   },
   about: {
     prizes: {
-      en: "Awards",
-      es: "Premios"
+      en: "Awards & Festivals",
+      es: "Premios y Festivales"
     }
   },
   item: {
