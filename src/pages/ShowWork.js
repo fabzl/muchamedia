@@ -19,15 +19,16 @@ const H2 = styled.h2`
   margin: 2rem 0 0.6em;
   letter-spacing: 130%;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.2rem;
   padding: 0 10%;
   width:100%;
   @media (min-width: 520px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
+	margin-bottom: 20px;
     padding: 0;
   }
-  @media (min-width: 1024px) {
-	font-size: 3rem;
+  @media (min-width: 1424px) {
+	font-size: 2.2rem;
   }
 
   &.dark {
@@ -113,6 +114,13 @@ const Laurel = styled.img`
   margin-left: auto; 
   margin-right: auto;
   transform: translateY(-50%);
+  
+  @media (min-width: 520px) {
+  
+	margin-top: 20px;
+
+  }
+
 
   @media (min-width: 1024px) {
   }
